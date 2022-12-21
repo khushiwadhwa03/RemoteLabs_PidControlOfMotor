@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+        <link rel="icon" type="image/xicon" 
+                         href="./Media/layers.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+        <title>PID Contol Motor Experiment</title>
+
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+        <div class="newnavbar">
+                <!--<a class="nav-img-1"> <img  ="van-i" src="./Media/2.png"
+                        width="10%"> </a>-->
+              <a href="../home.php"> Projects  </a>
+                <a href="../Akshat-website/main.html"> Theory  </a>
+                <a href="./index.html"> Video Camera </a>
+                <a href="./index.html"> Graph  </a>
+                <a href="#achieve"> Contributors </a>
+                <div class="nav-img items-nav timer"><a href="../login.php" style="padding-bottom: 20px; padding-top: 0px;"> Logout</a> </div>
+                <div id="demo" class="items-nav timer nav-img"></div>
+
+        </div>
+        <!-- p        <div class="containers">
+                artial:index.partial.html -->
+                <div class="blog-slider">
+                        <div class="blog-slider__wrp swiper-wrapper">
+                                <div id="camera" class="blog-slider__item swiper-slide">
+
+                                        <div class="blog-slider__extra">
+
+                                                <div class="range-slider">
+                                                        <input id="inp1" class="range-slider__range" type="range" value="9" min="0" max="10" step="0.1">
+                                                        <span class="range-slider__value">0</span>
+                                                </div> <div class="range-slider">
+                                                        <input id="inp2" class="range-slider__range" type="range" value="0.06" min="0" max="10" step="0.1">
+                                                        <span class="range-slider__value">0</span>
+                                                </div>
+ <div class="range-slider">
+                                                        <input id="inp3" class="range-slider__range" type="range" value="3" min="0" max="10" step="0.1">
+                                                        <span class="range-slider__value">0</span>
+                                                </div>
+ <div class="range-slider">
+                                                        <input id="inp4" class="range-slider__range" type="range" value="150" min="0" max="500">
+                                                        <span class="range-slider__value">0</span>
+                                                </div>
+
+                                                <!-- <img src="./Media/5.webp" alt=""> -->
+                                        </div>
+                                        <div class="blog-slider__content">
+                                                <span class="blog-slider__code">Live Stream From Camera</span>
+                                                <div class="blog-slider__title">Live Stream from Camera</div>
+                                                <div class="blog-slider__text">
+                                                        <iframe width="560" height="315" src="http://192.168.180.100/" title="YouTube video player" frameborder="0"  allowfullscreen>
+                                                        </iframe>
+                                                </div>
+                                                <a href="#" id="btn" class="blog-slider__button">UPDATE VALUES</a>
+                                        </div>
+                                </div>
+                                <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img div1" >
+                                                <img src="./Media/6.webp" alt=""  >
+                                        </div>
+                                                <div class="blog-slider__content">
+                                                        <div class="blog-slider__title">Graph</div>
+                                                        <div class="blog-slider__text">
+                                                                <div >
+                                                                        <canvas id="myChart" width="600" height="400"></canvas>
+                                                                </div>
+                                                        </div>
+                                                        <a href="#" class="blog-slider__button">READ MORE</a>
+                                                </div>
+                                </div>
+                                <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__img">
+                                                <img src="./Media/4.webp" alt="">
+                                        </div>
+                                        <div class="blog-slider__content">
+                                                <span class="blog-slider__code"></span>
+                                                <div class="blog-slider__title">Theory and Instructions</div>
+                                                <div class="blog-slider__text">
+                                                        <ul><li>Enter the required values using sliders.</li>
+                                                                <li> Press the Update button.</li>
+                                                                <li>Observe change of position in Graph and Camera</li>
+                                                        </ul></div>
+                                                <a href="../Akshat-website/main.html" class="blog-slider__button">READ MORE</a>
+                                        </div>
+                                </div>
+
+
+
+                        </div>
+                        <div class="blog-slider__pagination"></div>
+                </div>
+                <!-- partial -->
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+                <script  src="./js/scripts.js"></script>
+                <script>
+
+                        const labels = [
+                                'January',
+                                'February',
+                                'March',
+                                'April',
+                                'May',
+                                'June',
+                        ];
+
+const data = {
+        labels: labels,
+        datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45],
+        },{
+                label: 'Constant',
+                backgroundColor: 'rgb(0,255,0)',
+                data: [100],
+        }]
+};
+const config = {
+        type: 'line',
+        data: data,
+        options: {}
+};
+
+
+                </script>
+                <script>
+                        const myChart = new Chart(
+                                document.getElementById('myChart'),
+                                config
+                        );
+
+// this post id drives the example data
+var Url = 'https://api.thingspeak.com/channels/1922379/feeds.json?results=110'
+var Urlnew = 'https://api.thingspeak.com/channels/1878905/feeds.json?api_key=AMHN0IS1KTCLNBKQ&results=40'
+// logic to get new data
+//var inp_url = 'https://api.thingspeak.com/update?api_key=ULNGROAM97DY2SNO'
+
+var inp_url = 'https://api.thingspeak.com/update?api_key=TK0QTUF1PBS6TX25'
+var getData = function() {
+        $.ajax({
+                url: Url,
+                success: function(data) {
+                        // process your data to pull out what you plan to use to update the chart
+                        // e.g. new label and a new data point
+
+                        // add new label and data point to chart's underlying data structures
+                        time_arr = [];
+                        value_arr = [];
+                        const_arr = [];
+                  var input4 = document.getElementById('inp4').value;
+                        for(let i = 0;i < data['feeds'].length; i++) {
+                        
+                                //if(data['feeds'][i]['field1'] == 0)
+                                //        continue;
+                                time_arr.push(data['feeds'][i]['created_at'].slice(11,-1));
+                                value_arr.push(data['feeds'][i]['field5']);
+                                const_arr.push(input4);
+                        }
+
+
+                        myChart.data.labels = time_arr;
+                        myChart.data.datasets[0].data = value_arr;
+
+                        myChart.data.datasets[1].data = const_arr;
+                        // re-render the chart
+                        myChart.update();
+                }
+        });
+};
+var degree = 0
+$('#btn').click(function() {
+
+        var input1 = document.getElementById('inp1').value;
+        var input2 = document.getElementById('inp2').value;
+        var input3 = document.getElementById('inp3').value;
+        var input4 = document.getElementById('inp4').value;
+        degree = input4;
+        var final_url = inp_url + '&field1=' + String(input1)+ '&field2=' + String(input2) + '&field3=' + String(input3)+ '&field4=' + String(input4);
+        $.post(final_url);
+});
+
+// get new data every 3 seconds
+setInterval(getData, 3000);
+                </script>
+</body>
+</head>
+
+
+

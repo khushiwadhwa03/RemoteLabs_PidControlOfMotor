@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Model Is Training</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="bg-image" id="bg-image-scroll">
+        <header>
+            <nav>
+                <ul class="nav">
+                    <div class="items-nav"><a href="#bg-image-scroll">🏠</a></div>
+                    <div class="name">ESW Project</div>
+                    <!-- A dropdown where each goes to the about-me page of the person -->
+                    <div class="items-nav">
+                        <div class="dropdown">
+                            <button class="dropbtn">Team</button>
+                            <div class="dropdown-content">
+                                <a href="https://web.iiit.ac.in/~akshat.sanghvi">Akshat&nbspSanghvi</a>
+                                <a href="https://web.iiit.ac.in/~vanshika.dhingra">Vanshika&nbspDhingra</a>
+                                <a href="https://web.iiit.ac.in/~khushi.wadhwa">Khushi&nbspWadhwa</a>
+                                <a href="https://web.iiit.ac.in/~kyrylo.shyvam">Kyrylo&nbspShyvam&nbspKumar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="items-nav"><a href="../Kyrylo-website/index.html" class="info-links">Experiment</li></a>
+                    <li class="items-nav"><a href="#workinglink" class="info-links">Working</li></a>
+                    <li class="items-nav"><a href="#Applications" class="info-links">Applications</li></a>
+                    <!-- <img class="logo" src="" alt=""> 
+                    <div id="demo" class="items-nav timer"></div>-->
+                </ul>
+            </nav>
+        </header>
+        <div class="center-text">WELCOME TO OUR ESW PROJECT - PID CONTROL</div>
+    </div>
+    <div class="container">
+        <div id="workinglink">&nbsp;</div>
+        <div class="">&nbsp;</div>
+        <div class="working">PID CONTROLLERS</div>
+        <div class="">&nbsp;</div>
+        <div class="">&nbsp;</div>
+        <div class="head-flex">
+            <div class="headings-flex" data-text="ABOUT ME"><strong id="about">WHAT</strong></div>
+            <div class="headings-flex" data-text="MORE ABOUT ME"><strong id="moreabout">HOW</strong></div>
+        </div>
+        <div class="flex">
+            <div class="me me1">
+                <!-- <img src="graph.png" width="400" height="400" alt="house" /> -->
+                <div class="button"><button class="custom-btn btn-6" style="margin-top: 170px;"><span>READ MORE</span></div>
+                <div class="fadedbox">
+                    <div class="about-me">
+                        <strong>
+                            <div class="heading"><strong>WHAT IS A PID CONTROLLER</strong></div>
+                            <div class="emp">&nbsp</div>
+                            <div class="head-stuff">
+                                The PID controller is a control loop feedback mechanism widely used in industrial control systems. The word controller in PID control indicates that the controllers constantly monitor the error and adjust the input to the system to reduce the error. The controller calculates an error value as the difference between the desired set point and a measured process variable. The controller attempts to reduce the error by adjusting the process input. The three PID controllers: Proportional, Integral, and Derivative control.
+                            </div>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+            <div class="me me2">
+                <!-- <img src="graph.png" width="400" height="400" alt="house" /> -->
+                <div class="button"><button class="custom-btn btn-6" style="margin-top: 170px;"><span>READ MORE</span></div>
+                <div class="fadedbox">
+                    <div class="about-me">
+                        <strong>
+                            <div class="heading"><strong>WORKING OF A PID CONTROLLER</strong></div>
+                            <div class="emp">&nbsp</div>
+                            <!-- <div class="emp">&nbsp</div> -->
+                            <div class="head-stuff">
+                                A PID controller is an example of a feedback controller. These three terms&nbsp;&nbsp;&nbsp; (P, I, D) will be calculated in function of the error given by the sensor. Let's call these components functions to simplify things: e.g., I (e) is the integral function of the error e. The proportional controller stabilizes the gain but produces a steady state error. The integral controller reduces or eliminates the steady state error. The derivative controller reduces the rate of change of error.
+                            </div>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="theory" id="working">
+            <div class="Q">How to control a DC motor with an encoder?</div>
+            <br>
+            <div class="control ans">
+                <div class="control1">
+                    <div class="control1-text" id="control1-text">
+                        A rotary encoder is a type of position sensor that converts the angular position of a
+                        knob into an output signal that is used to determine which direction the knob is being turned.
+                        It works by observing changes to the magnetic field created by a magnet attached the motor
+                        shaft. As
+                        the motor rotates, the encoder outputs will trigger periodically.
+                        Inside the encoder is a slotted disc that is connected to the common ground pin C. It also
+                        contains
+                        two contact pins A and B, as shown below.
+                        When you turn the knob, A and B come into contact with the common ground pin C in a particular
+                        order
+                        according to the direction in which you are turning the knob.
+                        When they come into contact with common ground, signals are generated. These signals are 90° out
+                        of
+                        phase with each other as one pin comes into contact with the common ground before the other pin.
+                        This is called quadrature encoding.
+                        When you turn the knob clockwise the A pin connects to the ground before the B pin. And when you
+                        turn the knob counterclockwise, the B pin connects to the ground before the A pin.
+                    </div>
+                </div>
+                <img src="rotary-encoder-working-animation1.gif" alt="" height="300px" class="encoder-image">
+                <div class="control2">
+                    By tracking when each pin connects to or disconnects from ground, we can determine which direction
+                    the knob is being rotated. You can do this by simply observing the state of B when A changes state.
+                    When A changes state:
+                    <br>
+                    <br>
+                    <ul class="ul" style="list-style: none;">
+                        <li>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If B = A, the knob is turned counterclockwise. Rotary encoder output pulses in anticlockwise
+                            rotation
+                        </li>
+                        <div class="AB">
+                            <img src="encoder4.png" alt="" height="160px">
+                        </div>
+                        <li>
+                            If B ≠ A, then the knob is turned clockwise. Rotary encoder output pulses in clockwise
+                            rotation.
+                        </li>
+                        <div class="AB">
+                            <img src="encoder3.png" alt="" height="160px">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="Q Apps" id="Applications">Applications</div>
+            <div class="ans">
+                <ul class="ul" style="list-style: none;">
+                    <li class="li">
+                        <b>Motor protection:</b>
+                        <br>
+                        Most modern controllers have the following protections -
+                        under voltage, over voltage, short circuit protection, current limit protection, thermal
+                        protection and voltage transients. Without these protections the motor is “exposed” to threats
+                        that will possibly result in permanent electrical or mechanical damage.
+                    </li>
+                    <li class="li">
+                        <b>Speed control:</b>
+                        <br>
+                        All DC motors will lose speed as they are loaded and increase in speed when they are unloaded,
+                        in a linear fashion, according to their speed/torque gradient. For applications where a specific
+                        speed is required, with an unknown load (so a final speed cannot be calculated), or a
+                        fluctuating load (conveyor belt, pump, grinding tool, reel / converter, Cam) a controller is a
+                        must.
+                    </li>
+                    <li class="li">
+                        <b>Torque control:</b>
+                        <br>
+                        A DC motor's current is proportional to the torque delivery. Having control over the current
+                        to the motor will govern its torque delivery. Without control of the DC motor torque/current,
+                        the motor is allowed to pull large currents that can often result in torques delivered in excess
+                        of what is mechanically viable for the system, leading to imminent failure (especially with gear
+                        with large reduction ratios). Also failure can be in the form of burn out from stalling
+                        the motor, for instance when the mechanics are jammed.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="button"><a href="../Kyrylo-website/index.html" class="custom-btn btn-6"><span>LIVE EXPERIMENT</span></a></div>
+
+        </button>
+    </div>
+</body>
+
+</html>
